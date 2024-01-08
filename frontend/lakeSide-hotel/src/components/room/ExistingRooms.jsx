@@ -1,10 +1,11 @@
-import React, { useContext, useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { deleteRoom, getAllRooms } from "../utils/ApiFunctions"
 import { Col, Row } from "react-bootstrap"
 import RoomFilter from "../common/RoomFilter"
 import RoomPaginator from "../common/RoomPaginator"
 import { FaEdit, FaEye, FaPlus, FaTrashAlt } from "react-icons/fa"
 import { Link } from "react-router-dom"
+
 const ExistingRooms = () => {
 	const [rooms, setRooms] = useState([{ id: "", roomType: "", roomPrice: "" }])
 	const [currentPage, setCurrentPage] = useState(1)
